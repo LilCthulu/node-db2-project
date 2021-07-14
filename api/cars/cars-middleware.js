@@ -46,13 +46,15 @@ const checkVinNumberValid = (req, res, next) => {
     }
   }
 
-const checkVinNumberUnique = (req, res, next) => {
-  console.log('check')
-}
+// const checkVinNumberUnique = async (req, res, next) => {
+//   try{
+//     const existing = await Car.getByVin(req.body.vin)
+//   }
+// }
 
 module.exports = {
   checkCarId,
   checkCarPayload,
   checkVinNumberValid,
-  checkVinNumberUnique
+  
 }

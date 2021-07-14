@@ -1,6 +1,6 @@
 const express = require('express')
 const Cars = require('./cars-model')
-const {checkCarId, checkCarPayload, checkVinNumberValid, checkVinNumberUnique} = require('./cars-middleware')
+const {checkCarId, checkCarPayload, checkVinNumberValid, } = require('./cars-middleware')
 
 const router = express.Router()
 
@@ -16,7 +16,6 @@ router.get('/:id', checkCarId, (req, res, next) => {
 })
 
 router.post('/',
- checkCarPayload, checkVinNumberValid, checkVinNumberUnique,
  (req, res, next) => {
     Cars.create(req.body)
         .then((car) => res.json(car))

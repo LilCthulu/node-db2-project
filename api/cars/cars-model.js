@@ -2,8 +2,6 @@ const db = require('../../data/db-config')
 
 const getAll = () => {
   return db('cars')
-  .then(([cars]) => [cars])
-  .catch((err) => console.log(err))
 }
 
 const getById = (id) => {

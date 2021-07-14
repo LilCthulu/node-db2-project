@@ -46,8 +46,8 @@ const checkVinNumberValid = (req, res, next) => {
     }
   }
 
-const function checkVinNumberUnique = (req, res, next) => {
-  
+const checkVinNumberUnique = (req, res, next) => {
+  console.log('check')
 }
 
 module.exports = {
